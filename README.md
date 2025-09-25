@@ -3,6 +3,9 @@
 ## Aperçu
 Ce projet est un système de télécommunication basé sur GSM conçu pour l’équipe EcoCar participant au Shell Eco Marathon. Il permet une communication en temps réel entre le pilote dans le véhicule et l’équipe à l’extérieur à l’aide d’un microcontrôleur ESP32, d’un module GSM SIM800L, de deux boutons, d’un microphone, d’un haut-parleur et d’un écran OLED. Le système permet au pilote d’initier des appels, de recevoir automatiquement les appels de l’équipe, de rejeter les appels inconnus et d’afficher les statuts sur l’écran OLED.
 
+![Montage du système de communication](syst_communication.jpg)
+*Montage complet du système avec ESP32, SIM800L, boutons, microphone, haut-parleur et écran OLED.*
+
 ## Fonctionnalités
 - **Appels initiés par le pilote** : Le pilote peut appuyer sur un bouton vert pour appeler un numéro d’équipe prédéfini.
 - **Gestion automatique des appels** : Les appels entrants de l’équipe sont automatiquement pris, tandis que les appels de numéros inconnus sont rejetés avec un message affiché.
