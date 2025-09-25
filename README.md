@@ -63,7 +63,7 @@ Ce projet est un système de télécommunication basé sur GSM conçu pour l’�
    - Après la fin d’un appel, le système revient à « Système prêt » après un délai de 3 secondes.
 
 ## Aperçu du code
-Le fichier `gsm_test.ino` contient le croquis Arduino complet pour le système. Les fonctions clés incluent :
+Le fichier `appel_gsm_ecocar.ino` contient le croquis Arduino complet pour le système. Les fonctions clés incluent :
 - `setup()` : Initialise le modem, l’écran OLED, les boutons et la gestion de l’alimentation.
 - `makePhoneCall()` : Gère les appels sortants, y compris la vérification de la qualité du signal et la configuration audio.
 - `hangUpCall()` : Termine les appels actifs avec une confirmation affichée.
