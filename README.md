@@ -12,12 +12,10 @@ Ce projet est un système de télécommunication basé sur GSM conçu pour l’�
 - **Suivi du réseau** : Affiche la qualité du signal et l’état de la connexion réseau.
 
 ## Composants matériels
-- **ESP32 TTGO T-Call** : Microcontrôleur avec module GSM SIM800L intégré.
-- **Module SIM800L** : Pour la communication GSM (appels et connexion réseau).
+- **ESP32 TTGO T-Call SIM800L** : Microcontrôleur avec module GSM SIM800L intégré.
 - **Écran OLED 128x64** : Pour afficher les statuts (interface I2C, adresse 0x3C).
-- **Boutons vert et rouge** : Pour initier et terminer les appels.
+- **Boutons** : Pour initier et terminer les appels.
 - **Microphone et haut-parleur** : Réutilisés à partir d’écouteurs, soudés avec des fils conducteurs pour l’entrée/sortie audio.
-- **Gestion d’alimentation IP5306** : Assure une alimentation stable, y compris en mode batterie.
 
 ## Dépendances logicielles
 - **Arduino IDE** : Pour programmer l’ESP32.
@@ -29,7 +27,6 @@ Ce projet est un système de télécommunication basé sur GSM conçu pour l’�
 
 ## Instructions de configuration
 1. **Configuration matérielle** :
-   - Connectez le module SIM800L à l’ESP32 TTGO T-Call (broches définies dans le code : RX=26, TX=27, PWKEY=4, RST=5, POWER_ON=23).
    - Branchez l’écran OLED aux broches I2C (SDA=21, SCL=22).
    - Connectez le bouton vert à la broche 14 et le bouton rouge à la broche 12 (avec résistances pull-up).
    - Soudez le microphone et le haut-parleur aux broches audio du SIM800L pour la communication vocale.
@@ -38,7 +35,7 @@ Ce projet est un système de télécommunication basé sur GSM conçu pour l’�
 2. **Configuration logicielle** :
    - Installez l’Arduino IDE et les bibliothèques requises (`TinyGsmClient`, `Adafruit_GFX`, `Adafruit_SSD1306`).
    - Mettez à jour le numéro de téléphone dans le code (`PHONE_NUMBER` pour le numéro complet avec indicatif, `PHONE_NUMBER2` pour le numéro local).
-   - Téléversez le croquis `gsm_test.ino` sur l’ESP32 via l’Arduino IDE.
+   - Téléversez le croquis `appel_gsm_ecocar.ino` sur l’ESP32 via l’Arduino IDE.
 
 3. **Configuration** :
    - Assurez-vous que la carte SIM est active et a une couverture réseau.
@@ -51,7 +48,7 @@ Ce projet est un système de télécommunication basé sur GSM conçu pour l’�
    - Il vérifie l’état de la carte SIM et la connexion réseau, affichant « Connecté » ou « Pas de connexion » sur l’écran OLED.
 
 2. **Actions du pilote** :
-   - **Bouton vert** : Appuyez pour initier un appel vers le numéro d’équipe prédéfini. L’écran OLED affiche « Appel lancé » et met à jour selon l’état de l’appel (par exemple, « En appel... », « Connecté »).
+   - **Bouton vert** : Appuyez pour initier un appel vers le numéro d’équipe prédéfini. L’écran OLED affiche « Appel lancé ».
    - **Bouton rouge** : Appuyez pour terminer l’appel, affichant « Appel terminé » sur l’écran OLED.
 
 3. **Appels entrants** :
@@ -80,17 +77,12 @@ Le fichier `appel_gsm_ecocar.ino` contient le croquis Arduino complet pour le sy
 
 ## Améliorations futures
 - Ajouter une fonctionnalité SMS pour une communication textuelle.
-- Implémenter un suivi du niveau de batterie sur l’écran OLED.
 - Améliorer la qualité audio avec une réduction de bruit ou un meilleur matériel.
 - Ajouter la prise en charge de plusieurs numéros d’équipe prédéfinis.
 
 ## Contribution
 Les contributions sont les bienvenues ! Veuillez soumettre des issues ou des pull requests pour des corrections de bugs, des ajouts de fonctionnalités ou des améliorations de la documentation.
 
-## Licence
-Ce projet est sous licence MIT. Consultez le fichier [LICENSE](LICENSE) pour plus de détails.
-
 ## Remerciements
 - Équipe EcoCar pour l’inspiration et le soutien.
-- Shell Eco Marathon pour offrir une plateforme pour présenter des solutions innovantes.
 - Communautés Arduino et TinyGSM pour leurs bibliothèques open-source.
