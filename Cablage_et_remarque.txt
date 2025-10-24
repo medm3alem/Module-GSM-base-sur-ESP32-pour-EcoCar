@@ -7,6 +7,6 @@ speaker spk+ et spk- de esp32
 mettre puce telephone dans l'esp32
 
 NB
-changer numero à appeler dans le code
-changer numero de la puce que vous avez mis
+changer numero de tel à appeler dans le code dans PHONE_NUMBER (avec +216)
+changer numero de tel à appeler dans le code dans PHONE_NUMBER2 (le meme que PHONE_NUMBER2 mais sans +216)
 changer code PIN de la puce sinon mettre chaine vide au variable simPIN
