@@ -14,9 +14,9 @@
 // S'il vous plait ecrire le code pin s'il existe
 const char simPIN[] = "0000"; // Laissez vide si pas de PIN
 // S'il vous plait ecrire le seul numero (complet +xxx) à appeler 
-#define PHONE_NUMBER "+21621324404" // Votre numéro de téléphone
+#define PHONE_NUMBER "+21612345678" // Votre numéro de téléphone
 // S'il vous plait ecrire le seul numero (non complet sans +xxx) à appeler 
-#define PHONE_NUMBER2 "21324404" // Votre numéro de téléphone
+#define PHONE_NUMBER2 "12345678" // Votre numéro de téléphone
 
 // TTGO T-Call pins
 #define MODEM_RST 5
