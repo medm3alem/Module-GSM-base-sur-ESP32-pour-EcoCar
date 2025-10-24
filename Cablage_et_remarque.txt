@@ -1,0 +1,12 @@
+Cablage
+
+redbutton pin 14 esp32 et GND
+greenbutton pin 12 esp32 et GND
+micro mic- et mic+ de esp32
+speaker spk+ et spk- de esp32
+mettre puce telephone dans l'esp32
+
+NB
+changer numero à appeler dans le code
+changer numero de la puce que vous avez mis
+changer code PIN de la puce sinon mettre chaine vide au variable simPIN
